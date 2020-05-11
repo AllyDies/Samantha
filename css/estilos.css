@@ -1,0 +1,38 @@
+body {
+    background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/hubble-digital-library-main-1.jpg');
+    background-size: auto 100vh;
+    font-family: courier;
+    height: 100vh;
+  }
+  
+  .menu {
+     background-color: #538d99;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-title, 
+  .site-subtitle {
+    color: lightblue;
+    text-align: center;
+  }
+  
+  .site-subtitle {
+    font-style: italic;
+  }
