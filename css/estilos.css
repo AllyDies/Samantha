@@ -1,38 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/hubble-digital-library-main-1.jpg');
-    background-size: auto 100vh;
-    font-family: courier;
-    height: 100vh;
+  background-image: url('../img/72.jpg');
+  background-size: auto 100vh;
+  background-attachment: fixed;
+  font-family: 'Pinyon Script', cursive;
+  height: 100vh;
+  font-size: 14px;
+}
+
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
   }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body, 
+.menu,
+.sub-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-container {
+  background-color: #a26a428a;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.clearfix:after{
+  content: '.';
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+
+.menu-container lu {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.menu,
+.sub-menu {
+  list-style: none;
+}
+
+.sub-menu {
+  background-color: #a26a428a;
+}
+
+.menu a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  color: whitesmoke;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 700;
+}
+
+.menu a:active, .menu a:hover {
+  color: #eeb793;
+  text-decoration: none;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu > li {
+  float: left;
+  transition: background-color 2s, color 2s
+}
+
+.menu > li:hover {
+  background-color: #58150fd6;
+}
+
+.menu li:hover > .sub-menu {
+  display: block;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+}
+
+.sub-menu li {
+  transition: background-color 2s, color 2s;
+}
+
+.sub-menu li:hover {
+  background-color: #58150fd6;
+}
+
+.sub-menu .sub-menu {
+  top: 0;
+  left: 100%;
+}
+
+a {
+  color: #ff7b00;
+  text-decoration: none;
+}
   
-  .menu {
-     background-color: #538d99;
-  }
+a:hover {
+  text-decoration: underline;
+  color:  #8c4400;
+}
+
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
   
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  100% {transform: scale(1) translateY(0);
+    opacity: 1;
   }
+}
   
-  .menu li {
-    list-style: none;
-  }
+.site-title, 
+.site-subtitle {
+  color: black;
+  text-align: center; 
+  font-family: 'Parisienne', cursive;
+}
+
+.site-title {
+  font-size: 4em;
+}
   
-  a {
-    color: white;
-    text-decoration: none;
+.site-subtitle {
+  font-style: italic;
+  line-height: 1.2em;
+}
+
+.sobre,
+.contato,
+.portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
   }
+}
+
+.sobre h2,
+.contato h2,
+.portfolio h2 {
+  font-family: 'Dancing Script', cursive;
+  color: black;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.sobre p {
+  text-indent: 1.4em;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 1em;
+}
+.sobre .avatar img {
+  border-radius: 50%;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 240px);
+    justify-content: center;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px ;
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  transition: transform 500ms;
+}
+
+/*|.img-portfolio:hover {
+  transform: scale(1.1) rotate(-2deg);
+}*/
+
+.flip-card {
+  perspective: 450px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  background-color: tomato;
+  width: 100%;
+  height: 180px;
+  transform: rotateY(180deg);
+}
+
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contato .icons{
+ text-align: center;
+}
+
+.contato {
   
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .site-title, 
-  .site-subtitle {
-    color: lightblue;
-    text-align: center;
-  }
-  
-  .site-subtitle {
-    font-style: italic;
-  }
+}
+
+
+.contato a {
+ color: #560c01;
+ font-size: 4em;
+ transition: color 2s, text-shadow 2s;
+}
+
+.contato a:active,
+.contato a:hover {
+text-decoration: none;
+color: #e7dfc9;
+text-shadow: 0px 0px 10px #560c01;
+}

@@ -1,22 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Samantha Albuquerque</title>
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samantha 0.1</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Parisienne&family=Pinyon+Script&display=swap"
+    rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/cec47660e1.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <nav class="menu">
-            <ul>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Portifólio</a></li>
-              <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-        <h1 class="site-title">Samantha Albuquerque</h1>
-        <h2 class="site-subtitle">Fotógrafa</h2>
-      </header>
-      
+  <header>
+    <div class="menu-container">
+      <lu class="menu clearfix">
+        <li><a href="#top">Início</a></li>
+        <li><a href="#sobre">Sobre</a>
+          <!-- Nível 1 -->
+          <!-- submenu -->
+          <ul class="sub-menu clearfix">
+            <li><a href="#">Sub</a>
+              <!-- Nível 2 -->
+              <!-- submenu do submenu -->
+              <ul class="sub-menu">
+                <li><a href="#">Sub Sub</a>
+                  <!-- Nível 3 -->
+                  <!-- submenu do submenu do submenu -->
+                  <ul class="sub-menu">
+                    <li><a href="#">Sub Sub</a></li>
+                    <li><a href="#">Sub Sub</a></li>
+                    <li><a href="#">Sub Sub</a></li>
+                    <li><a href="#">Sub Sub</a></li>
+                    <li><a href="#">Sub Sub</a></li>
+                  </ul><!-- submenu do submenu do submenu -->
+                </li>
+                <li><a href="#">Sub Sub</a></li>
+                <li><a href="#">Sub Sub</a></li>
+                <li><a href="#">Sub Sub</a></li>
+                <li><a href="#">Sub Sub</a></li>
+              </ul><!-- submenu do submenu -->
+            </li>
+            <li><a href="#">Sub</a></li>
+            <li><a href="#">Sub</a></li>
+            <li><a href="#">Sub</a></li>
+            <li><a href="#">Sub</a></li>
+            <li><a href="#">Sub</a></li>
+          </ul><!-- submenu -->
+        </li> 
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contato">Contatos</a></li>
+      </lu>
+    </div>
+    <div class="titulo">
+      <h1 class="site-title">Samantha 0.1</h1>
+      <h2 class="site-subtitle">Fotógrafa</h2>
+      <h2 class="site-subtitle">Musicista</h2>
+    </div>
+
+  </header>
+  <section class="sobre container" id="sobre">
+    <h2>Sobre</h2>
+
+    <figure class="avatar">
+      <img src="https://pbs.twimg.com/profile_images/1256236590046810112/ZhOLwlZo_400x400.jpg"
+        alt="Samantha Albuquerque">
+    </figure>
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quibusdam unde quidem, numquam quasi architecto
+      beatae, laboriosam nulla maxime accusantium consectetur error! Exercitationem, minus praesentium corrupti
+      cupiditate repudiandae nihil commodi?
+    </p>
+
+    <p>
+      Ea sed veniam hic unde tenetur doloremque odio eum iste aut eius, consectetur rem, ratione necessitatibus quas
+      saepe rerum, possimus eos! At, provident. Deleniti saepe doloremque voluptatibus voluptatum ratione. Et?
+    </p>
+
+    <p>
+      Sequi repudiandae facere quisquam blanditiis? Sequi voluptate, quod autem architecto tempora aperiam illum
+      consequatur ad qui cum culpa necessitatibus quam soluta porro error, vitae itaque nulla ipsum officiis? Rerum,
+      neque!
+    </p>
+
+    <p>
+      Esse site foi construido durante a <a href="http://caelum.rds.land/receba-um-aviso">Imerção CSS da Alura</a> ;)
+    </p>
+
+  </section>
+  <section class="portfolio container" id="portfolio">
+    <h2>Portfólio</h2>
+    <div class="grid">
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-font">
+            <img class="img-portfolio" src="./img/planes.jpg" alt="Planer">
+            <figcaption>Planer</figcaption>
+          </figure>
+          <div class="card-back">
+            oi
+          </div>
+        </div>
+      </div>
+
+      <figure>
+        <img class="img-portfolio" src="./img/mountain.jpg" alt=">Mountain">
+        <figcaption>Mountain</figcaption>
+      </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/nevoeiro.jpg" alt="Nevoeiro">
+        <figcaption>Nevoeiro</figcaption>
+      </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/praia.jpg" alt="Praia">
+        <figcaption>Praia</figcaption>
+      </figure>
+    </div>
+
+  </section>
+  <section class="contato container" id="contato">
+    <h2>Contato</h2>
+    <div class="grid icons">
+      <a target="_blank" href="https://github.com/vanessametonini">
+        <i class="fab fa-github"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/vanessametonini">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a target="_blank" href="https://linkedin.com/in/vanessametonini">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:vanessa.tonini@caelum.com.br">
+        <i class="fas fa-envelope-open-text"></i>
+      </a>
+    </div>
+  </section>
+  <a href="https://www.freepik.es/fotos/fondo">Foto de Fondo creado por efe_madrid - www.freepik.es</a>
+
 </body>
+
 </html>
