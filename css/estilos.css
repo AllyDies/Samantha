@@ -10,24 +10,24 @@ body {
   background-attachment: fixed;
   font-family: 'Pinyon Script', cursive;
   height: 100vh;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 @media (min-width: 400px) {
   body {
-    font-size: 14px;
+    font-size: 22px;
   }
 }
 
 @media (min-width: 600px) {
   body {
-    font-size: 18px;
+    font-size: 26px;
   }
 }
 
 @media (min-width: 1200px) {
   body {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -203,8 +203,11 @@ a:hover {
   float: right;
   margin-left: 1em;
 }
+
 .sobre .avatar img {
   border-radius: 50%;
+  height: 310px;
+  width: auto;
 }
 
 .portfolio .grid {
@@ -276,11 +279,6 @@ a:hover {
 .contato .icons{
  text-align: center;
 }
-
-.contato {
-  
-}
-
 
 .contato a {
  color: #560c01;
